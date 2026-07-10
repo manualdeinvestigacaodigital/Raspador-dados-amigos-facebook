@@ -1,0 +1,49 @@
+{
+  "manifest_version": 3,
+  "name": "Raspador de dados de amigos do Facebook",
+  "version": "50.0.0",
+  "description": "Extensão B35A1/Rosetta para raspagem online de relações do Facebook, com exportação HTML/JSON/CSV/PDF/XLSX.",
+  "minimum_chrome_version": "114",
+  "permissions": [
+    "tabs",
+    "scripting",
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://www.facebook.com/*",
+    "https://web.facebook.com/*",
+    "https://static.xx.fbcdn.net/*",
+    "https://*.fbcdn.net/*"
+  ],
+  "background": {
+    "service_worker": "service_worker.js"
+  },
+  "action": {
+    "default_title": "Raspador de dados de relações do Facebook"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.facebook.com/*",
+        "https://web.facebook.com/*"
+      ],
+      "js": [
+        "main_world_hook.js"
+      ],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": [
+        "https://www.facebook.com/*",
+        "https://web.facebook.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle",
+      "world": "ISOLATED"
+    }
+  ]
+}

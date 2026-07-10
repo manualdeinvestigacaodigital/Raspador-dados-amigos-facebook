@@ -1,0 +1,16 @@
+*.zip
+*.log
+*.tmp
+*.bak
+*.sha256.txt
+*.sha512.txt
+AUDITORIA_*
+TESTE_*
+TESTAR_*
+COMANDOS_*
+.DS_Store
+Thumbs.db
+node_modules/
+dist/
+build/
+.vscode/
