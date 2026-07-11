@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/manualdeinvestigacaodigital/facebook-raspador-de-dados-web-scraper/main/Face.png" width="140">
-</p>
-
 <h1 align="center">Raspador de Dados de Amigos do Facebook</h1>
 
 <p align="center">
@@ -23,6 +19,36 @@ A aplicação permite extrair dados de relações visíveis ou materializadas pe
 O sistema atua diretamente no ambiente do navegador, realizando leitura do DOM da página, acompanhamento da rolagem, identificação de perfis exibidos, enriquecimento de metadados e geração de arquivos estruturados para análise.
 
 A ferramenta foi projetada para trabalhar com dados observáveis na interface, preservando a distinção entre relações declaradas pelo Facebook e relações efetivamente materializadas durante a navegação.
+
+---
+
+# 🖼️ DEMONSTRAÇÃO VISUAL
+
+> **Dados demonstrativos:** as imagens abaixo foram preparadas com identidades, nomes, contatos, números e perfis fictícios. Elas servem exclusivamente para demonstrar a apresentação da ferramenta e não correspondem a uma coleta real.
+
+## Visão geral do relatório
+
+A visão geral apresenta o perfil-alvo, a relação solicitada, a relação efetivamente materializada pela interface, os totais observados e o início da grade estruturada de resultados.
+
+<p align="center">
+  <img src="docs/images/01-visao-geral-relatorio-facebook.png" alt="Visão geral demonstrativa do relatório do raspador de dados do Facebook" width="100%">
+</p>
+
+## Dados estruturados e metadados
+
+A grade organiza fotos, capas, nomes, perfis, bios, categorias, links externos, contadores públicos, contatos, localização e demais metadados disponíveis.
+
+<p align="center">
+  <img src="docs/images/02-tabela-dados-perfis-facebook.png" alt="Tabela demonstrativa com dados estruturados de perfis" width="100%">
+</p>
+
+## Galeria visual dos perfis coletados
+
+Ao final do relatório, a galeria facilita a conferência visual das fotos recuperadas e da classe de qualidade atribuída a cada mídia.
+
+<p align="center">
+  <img src="docs/images/03-galeria-perfis-facebook.png" alt="Galeria demonstrativa dos perfis coletados" width="100%">
+</p>
 
 ---
 
@@ -90,6 +116,11 @@ Após a extração, a estrutura esperada será semelhante a:
     │   ├── content.js
     │   ├── main_world_hook.js
     │   └── service_worker.js
+    ├── docs/
+    │   └── images/
+    │       ├── 01-visao-geral-relatorio-facebook.png
+    │       ├── 02-tabela-dados-perfis-facebook.png
+    │       └── 03-galeria-perfis-facebook.png
     ├── README.md
     └── .gitignore
 
